@@ -1,0 +1,62 @@
+.bar {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 999px;
+  background: var(--red);
+  color: var(--white);
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  display: block;
+  width: 1.4rem;
+  height: auto;
+}
+
+.message {
+  min-width: 250px;
+  padding-left: 1rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin: 0;
+  color: inherit;
+  white-space: nowrap;
+  font-size: 1.8rem;
+  width: auto;
+  transition: width 0.35s ease;
+}
+
+/* .message {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 13rem;
+  min-height: 1.5em;
+  margin: 0;
+} */
+
+.service {
+  display: block;
+  white-space: nowrap;
+}
+
+.handwritten {
+  font-family: var(--font-hello-organic);
+  font-size: 1rem;
+}
+
+.service {
+  font-family: var(--font-advercase);
+  line-height: 0.85;
+}

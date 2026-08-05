@@ -1,0 +1,86 @@
+.nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoside {
+  width: 200px;
+}
+
+.linkSide {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  font-family: var(--font-hello-organic);
+  font-size: clamp(1.1rem, 1.8vw, 2rem);
+}
+
+.otherLink {
+  color: var(--white);
+}
+
+/* 
+Mobile */
+
+.hamburger {
+  position: relative;
+  z-index: 1001;
+  background-color: var(--red);
+  border-radius: 100px;
+}
+
+.mobileNav {
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  max-width: 500px;
+  height: 95vh;
+  z-index: 1000;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--white);
+  flex-direction: column;
+  padding: 4rem 2rem 6rem 2rem;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.mainLinks {
+  color: var(--red);
+  font-family: var(--font-advercase);
+}
+
+.mobileLinkMain {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bracket {
+  font-size: 2.4rem;
+  font-weight: 100;
+  margin-right: 1rem;
+}
+
+.secondaryLinks {
+  font-family: var(--font-hello-organic);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .linkSide {
+    display: none;
+  }
+
+  .mobileNav {
+    display: flex;
+  }
+}

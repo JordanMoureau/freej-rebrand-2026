@@ -1,0 +1,16 @@
+.topper {
+  background-color: var(--foreground);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--white);
+  font-family: var(--advercase);
+  font-style: italic;
+  font-size: small;
+}
+
+.socials {
+  display: flex;
+  gap: 0.5rem;
+}
