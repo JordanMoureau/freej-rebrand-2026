@@ -1,7 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import styles from "./navigation.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import TrustBar from "./trustBar";
+
+import { motion } from "motion/react";
 
 const links = [
   { label: "brands", href: "/brands" },
@@ -19,6 +24,7 @@ const otherlinks = [
 ];
 
 export default function Navigation() {
+  const [open, setOpen] = useState(false);
   return (
     <>
       <nav className={styles.nav} aria-label="Main navigation">
@@ -33,6 +39,16 @@ export default function Navigation() {
               className={styles.logo}
             />
           </Link>
+
+          <button
+            aria-label="Toggle navigation"
+            aria-expanded={open}
+            className={`${styles.hamburger} ${open ? styles.open : ""}`}
+            onClick={() => setOpen(!open)}
+          >
+            <span className={styles.line}></span>
+            <span className={styles.line}></span>
+          </button>
         </div>
 
         <div className={styles.linkSide}>
@@ -47,7 +63,31 @@ export default function Navigation() {
           </Link>
         </div>
 
-        <div className={styles.mobileNav}>
+        <motion.div
+          className={`${styles.mobileNav} ${open ? styles.openNav : ""}`}
+          initial={false}
+          animate={open ? "open" : "closed"}
+          variants={{
+            closed: {
+              x: "20%",
+              opacity: 1,
+              scale: 0.98,
+              pointerEvents: "none",
+            },
+            open: {
+              x: 0,
+              opacity: 1,
+              scale: 1,
+              pointerEvents: "auto",
+            },
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 220,
+            damping: 11,
+            mass: 0.9,
+          }}
+        >
           <div className={styles.mainLinks}>
             {links.map((link) => (
               <Link
@@ -72,7 +112,7 @@ export default function Navigation() {
             ))}
           </div>
           <TrustBar />
-        </div>
+        </motion.div>
       </nav>
     </>
   );
