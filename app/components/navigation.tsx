@@ -25,6 +25,8 @@ const otherlinks = [
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
+  const MotionLink = motion.create(Link);
+
   return (
     <>
       <nav className={styles.nav} aria-label="Main navigation">
@@ -53,9 +55,21 @@ export default function Navigation() {
 
         <div className={styles.linkSide}>
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className={styles.navLink}>
-              {"{"} {link.label} {"}"}
-            </Link>
+            <MotionLink
+              key={link.href}
+              href={link.href}
+              className={styles.navLink}
+              whileHover={{ width: "25%" }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 30,
+              }}
+            >
+              <div>{"{"}</div>
+              {link.label}
+              <div>{"}"}</div>
+            </MotionLink>
           ))}
 
           <Link href={"/contact-me"} className={styles.otherLink}>

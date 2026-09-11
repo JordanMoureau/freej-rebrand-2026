@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import Topper from "./components/topper";
+import Footer from "./components/footer";
 
 const advercase = localFont({
   src: [
@@ -65,6 +66,7 @@ export default function RootLayout({
     >
       <Topper />
       <body>{children}</body>
+      <Footer />
     </html>
   );
 }

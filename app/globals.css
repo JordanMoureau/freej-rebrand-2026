@@ -5,6 +5,8 @@
   --red: #fa8460;
   --new-black: #5c5451;
   --dark-new-black: #2d2a29;
+  --taupe: #d9c7a3;
+  --warm-gray: #a89f90;
 
   --advercase: var(--font-advercase);
   --organic-hand: var(--font-hello-organic);
@@ -47,4 +49,34 @@ a {
 img {
   width: 100%;
   height: auto;
+}
+
+h2 {
+  font-family: var(--organic-hand);
+  color: var(--red);
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 0.8;
+}
+
+h3 {
+  font-family: var(--advercase);
+  color: var(--new-black);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: var(--baskerville);
+  color: var(--new-black);
+  font-size: 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+::selection {
+  background: rgba(250, 132, 96, 0.35);
 }

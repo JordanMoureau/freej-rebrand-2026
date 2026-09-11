@@ -8,6 +8,11 @@
   font-family: var(--advercase);
   font-style: italic;
   font-size: small;
+
+  h3 {
+    color: var(--white);
+    font-size: 1rem;
+  }
 }
 
 .socials {
