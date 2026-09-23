@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Freelance Jordan — Rebuild No. 6... 7?
 
-## Getting Started
+A ground-up rebuild of [FreelanceJordan.com](https://freelancejordan.com).
 
-First, run the development server:
+## Project Goals
+
+Build a classy, fun freelancer website focused on design-to-build web services, with an emphasis on websites as complete SEO products.
+
+The larger stretch goal is a custom CRM and project-management platform built around my own freelance workflow.
+
+Planned functionality includes:
+
+- Internal CRM and project-management dashboard
+- Tailored AI integration
+- Client-side login and project dashboard
+- Project progress tracking
+- Seamless client-facing project updates
+- Automated project update emails
+- Upsell visibility throughout the client experience
+- Invoicing and payment tracking
+- Client messaging
+- Potential AI-assisted client chat
+
+## Backend
+
+The planned backend uses a Ruby on Rails API for CRUD operations and OpenAI integration.
+
+The goal is to create an AI-assisted workflow where internal notes and project updates can be pushed seamlessly into the client-facing experience while keeping communication and project management centralized.
+
+## Long-Term Direction
+
+The long-term plan is to take the Ruby on Rails API and extend it directly into app production, allowing the web platform and future application to share the same backend architecture.
+
+## Video Compression
+
+FFmpeg command currently used to compress hero and web video assets:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+ffmpeg -i public/hero.mp4 \
+-c:v libx264 \
+-preset slow \
+-b:v 6000k \
+-maxrate 7000k \
+-bufsize 12000k \
+-an \
+-movflags +faststart \
+public/hero-web-20mb.mp4
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

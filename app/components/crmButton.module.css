@@ -1,0 +1,33 @@
+.stickyWrap {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  margin-left: auto;
+  align-self: flex-start;
+  padding: 1.5rem;
+}
+
+.crmbutton {
+  background-color: var(--red);
+  border-radius: 100rem;
+  top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+
+  z-index: 20;
+  padding: 0 1rem;
+  white-space: nowrap;
+  align-items: center;
+  cursor: pointer;
+}
+
+.crmbutton svg {
+  width: 1.9rem;
+  height: auto;
+}
+
+.label {
+  font-family: var(--font-advercase);
+  color: #ef6343;
+  font-size: 2rem;
+}
