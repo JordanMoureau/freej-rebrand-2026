@@ -7,16 +7,28 @@
 }
 
 .logoSide {
-  width: 200px;
+  width: 280px;
 }
 
 /* Desktop nav */
 
 .linkSide {
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 1.4rem;
+  font-family: var(--font-hello-organic);
+  font-size: clamp(1.1rem, 1.8vw, 2rem);
+}
 
+.pinklinks {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1.4rem;
+  align-items: flex-end;
+  justify-content: end;
+  gap: 1.4rem;
   font-family: var(--font-hello-organic);
   font-size: clamp(1.1rem, 1.8vw, 2rem);
 }
@@ -27,10 +39,26 @@
   justify-content: space-between;
   gap: 0.5rem;
   white-space: nowrap;
+  transition: all 0.3s ease;
+}
+.navLink:hover {
+  color: #ef6343;
 }
 
 .otherLink {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-direction: row;
   color: var(--white);
+  white-space: nowrap;
+  transition: all 0.5s ease;
+}
+
+.otherLink:hover {
+  color: #d9c7a3;
 }
 
 /* Mobile nav */
@@ -133,9 +161,35 @@
 }
 
 .secondaryLinks {
-  margin-bottom: 2rem;
+  margin: 1rem 0rem 2rem;
   font-family: var(--font-hello-organic);
-  font-size: 2rem;
+  font-size: 1.8rem;
+}
+
+.crmbutton {
+  width: 125%;
+  background-color: var(--red);
+  border-top-left-radius: 100rem;
+  border-bottom-left-radius: 100rem;
+  display: flex;
+  flex-direction: row;
+  padding: 0 1rem;
+  gap: 1rem;
+  white-space: nowrap;
+  align-items: center;
+  cursor: pointer;
+  color: var(--red);
+}
+
+.crmbutton svg {
+  width: 1.5rem;
+  height: auto;
+}
+
+.label {
+  font-family: var(--font-advercase);
+  color: var(--white);
+  font-size: 1.6rem;
 }
 
 /* Responsive */

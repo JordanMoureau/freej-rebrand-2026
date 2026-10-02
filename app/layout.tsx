@@ -64,9 +64,10 @@ export default function RootLayout({
       lang="en"
       className={`${advercase.variable} ${helloOrganic.variable} ${libreBaskerville.variable}`}
     >
-      <Topper />
-      <body>{children}</body>
-      <Footer />
+      <body>
+        <Topper />
+        {children} <Footer />
+      </body>
     </html>
   );
 }
