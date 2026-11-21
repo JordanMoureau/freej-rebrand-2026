@@ -1,0 +1,59 @@
+.imageSlider {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+
+  padding: 1rem;
+  margin-top: -11rem;
+
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.slide {
+  flex: 0 0 auto;
+}
+
+.image {
+  display: block;
+  width: auto;
+  height: 580px;
+  object-fit: contain;
+  border-radius: 1.5rem;
+}
+
+@media (max-width: 1100px) {
+  .imageSlider {
+    margin-top: -4rem;
+  }
+  .image {
+    height: 460px;
+  }
+}
+
+@media (max-width: 800px) {
+  .imageSlider {
+    margin-top: -2rem;
+  }
+  .image {
+    height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .imageSlider {
+    margin-top: 3rem;
+  }
+  .image {
+    height: 300px;
+  }
+}

@@ -13,7 +13,7 @@
 }
 
 .mainLogo {
-  min-height: 91vh;
+  min-height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -45,7 +45,6 @@
 
 .heroContent {
   position: relative;
-  z-index: 1;
 }
 
 .homemain {
@@ -67,6 +66,15 @@
 
 .banner {
   margin-top: -2rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+.bannerContainer {
+  width: 100%;
+  background-color: var(--red);
 }
 
 .portfolioSection {
@@ -74,8 +82,8 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--red);
-  margin-top: -7rem;
-  padding-top: 7rem;
+  margin-top: -10rem;
+  padding-top: 9rem;
   min-height: 90vh;
 }
 
@@ -87,6 +95,7 @@
   gap: 3rem;
   width: 100%;
   color: var(--white);
+  container-type: inline-size;
 }
 
 .workLink {
@@ -95,9 +104,9 @@
   align-items: center;
   gap: 1rem;
   font-family: var(--font-hello-organic);
-  font-size: 2.5rem;
+  font-size: 2.5vw;
   text-decoration: none;
-  white-space: nowrap;
+  white-space: wrap;
   transition: color 0.2s ease;
 }
 
@@ -159,6 +168,231 @@
 .deskVisual {
   display: flex;
   flex-direction: column;
+
   width: 100%;
   color: var(--white);
+  position: relative;
+}
+
+.deskVisual {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+}
+
+.deskHeadline {
+  text-align: right;
+
+  margin-top: -4.5rem;
+  z-index: 5;
+  position: relative;
+  font-family: var(--font-hello-organic);
+}
+
+.deskHeader {
+  transform: rotate(-6deg);
+  font-size: clamp(4rem, 6vw, 7rem);
+  line-height: 0.8;
+}
+.donuts {
+  transform: rotate(-4deg);
+  font-size: 3vw;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: end;
+  gap: 1rem;
+}
+
+.stars svg {
+  width: 100px;
+}
+
+.longGame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1100px;
+  padding: 1rem 1rem 6rem 1rem;
+  h2 {
+    color: var(--white);
+    font-size: clamp(4rem, 7vw, 6rem);
+    text-align: right;
+  }
+  p {
+    max-width: 700px;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+}
+
+.ctaLink {
+  margin-top: 2rem;
+  color: var(--white);
+  font-family: var(--font-hello-organic);
+  font-size: clamp(2rem, 2.8vw, 2rem);
+}
+
+.aboutFreej:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/clouddesk.jpg");
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.aboutFreej {
+  background-color: var(--taupe);
+  position: relative;
+  isolation: isolate;
+  z-index: 10;
+  margin-top: -9rem;
+  border-top-left-radius: 3.5rem;
+  border-top-right-radius: 3.5rem;
+  padding: 9rem 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+
+  .freejContainer {
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    h2 {
+      color: var(--white);
+    }
+    h3 {
+      color: var(--white);
+      font-size: 4.5rem;
+    }
+    p {
+      color: var(--white);
+    }
+
+    a {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      color: var(--white);
+      font-family: var(--font-hello-organic);
+      font-size: clamp(2rem, 2.5vw, 3rem);
+      svg {
+        width: 180px;
+      }
+    }
+
+    a:hover {
+      color: var(--dark-red);
+
+      svg {
+        path {
+          fill: var(--dark-red);
+        }
+      }
+    }
+  }
+}
+
+.projectBar {
+  position: relative;
+  z-index: 10;
+  margin-top: -3.5rem;
+  background-color: var(--white);
+  border-top-left-radius: 3.5rem;
+  border-top-right-radius: 3.5rem;
+  padding: 5rem 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .projectContainer {
+    max-width: 900px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    h3 {
+      color: var(--red);
+      font-size: 4.5rem;
+    }
+  }
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.link {
+  font-family: var(--font-hello-organic);
+  font-size: 2.5vw;
+}
+
+.notConvincedBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.7rem;
+  background-color: var(--red);
+  color: var(--white);
+  font-family: var(--advercase);
+
+  h2 {
+    font-size: 2.5vw;
+    color: var(--white);
+    font-family: var(--advercase);
+  }
+}
+
+.contactFormHome {
+  padding: 8rem 3rem 5rem 8rem;
+  background-image: url("/dark-chamomile.png");
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 800px) {
+  .contactFormHome {
+    padding: 0;
+  }
+
+  .banner {
+    display: none;
+  }
+
+  .firstHome {
+    margin: 4rem 2rem 10rem;
+    padding: 1rem;
+  }
+
+  .workLinks {
+    display: none;
+  }
+
+  .seoCopy {
+    flex-direction: column;
+  }
+
+  .aboutFreej {
+    margin-top: -3.2rem;
+    margin-bottom: -3.2rem;
+
+    padding-bottom: 4rem;
+  }
 }

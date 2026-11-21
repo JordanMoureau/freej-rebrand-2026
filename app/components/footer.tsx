@@ -5,12 +5,24 @@ import InstagramIcon from "./InstagramIcon";
 
 import Image from "next/image";
 
+const footerLinks = [
+  {
+    label: "SEO Strategy / ",
+    href: "/freelance-jordan-services/seo-strategies",
+  },
+
+  { label: "Case Studies / ", href: "/seo-case-studies" },
+  { label: "Project Journal / ", href: "/project-journal" },
+  { label: "Portfolio / ", href: "/freej-portfolio" },
+  { label: "Client Space", href: "/the-client-space" },
+];
+
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerLogo}>
         <Image
-          src="/pink-logo.png"
+          src="/dark-logo.png"
           width={300}
           height={300}
           alt="Freelance Jordan"
@@ -19,21 +31,25 @@ export default function Footer() {
 
       <div className={styles.footerContent}>
         <div className={styles.footerContact}>
-          <p>Located in Coeur d'Alene, ID</p>
-          <p>Contact me @ jordan@freelancejordan.com</p>
-          <p>Or call (206) 715-7980</p>
+          <p>
+            Located in{" "}
+            <em>
+              <Link href={"/"} className="underline">
+                Alpharetta, Georgia,
+              </Link>
+            </em>{" "}
+            Freelance Jordan is a<br></br>
+            boutique digital agency specializing in visibility strategies
+            <br></br> for small businesses
+          </p>
         </div>
 
         <nav className={styles.footerNav} aria-label="Footer navigation">
-          <Link href="/resources">Resources</Link>
-          <span>|</span>
-          <Link href="/portfolio">Portfolio</Link>
-          <span>|</span>
-          <Link href="/seo-strategy">SEO Strategy</Link>
-          <span>|</span>
-          <Link href="/case-studies">Case Studies</Link>
-          <span>|</span>
-          <Link href="/contact">Contact Me</Link>
+          {footerLinks.map((link) => (
+            <Link key={link.href} href={link.href}>
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
         <div className={styles.footerSocials}>

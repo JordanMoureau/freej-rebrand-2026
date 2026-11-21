@@ -1,16 +1,22 @@
 .imageSlider {
-  padding: 1rem;
-  margin-top: -7rem;
   position: relative;
   z-index: 5;
+
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+
+  padding: 1rem;
+  margin-top: -11rem;
+
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .track {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  width: max-content;
 }
 
 .slide {

@@ -1,11 +1,14 @@
 "use client";
 import styles from "./contactForm.module.css";
+import DoubleStar from "./doublestar";
 
 export default function ContactForm() {
   return (
     <div className={styles.form}>
       <div className={styles.formhead}>
-        <h2>Contact FreeJ For...</h2>
+        <h2>
+          Contact Freelance Jordan <DoubleStar /> For...
+        </h2>
 
         <p>
           A website that looks good & works, more information about the services

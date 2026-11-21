@@ -9,7 +9,9 @@ const images = [
   { src: "/portfolio-04.png", width: 900, height: 1200 },
   { src: "/portfolio-05.png", width: 1200, height: 900 },
   { src: "/portfolio-06.png", width: 1400, height: 900 },
+  { src: "/wildwood.gif", width: 1200, height: 900 },
   { src: "/portfolio-07.png", width: 1200, height: 900 },
+  { src: "/branding-01.webp", width: 1200, height: 900 },
   { src: "/portfolio-08.png", width: 1200, height: 900 },
   { src: "/portfolio-09.png", width: 1200, height: 900 },
   { src: "/portfolio-10.png", width: 1200, height: 900 },
@@ -26,8 +28,10 @@ export default function ImageSlider() {
 
   useEffect(() => {
     const measure = () => {
+      const firstPosition = slideRefs.current[0]?.offsetLeft ?? 0;
+
       const positions = slideRefs.current.map(
-        (slide) => slide?.offsetLeft ?? 0,
+        (slide) => (slide?.offsetLeft ?? 0) - firstPosition,
       );
 
       setOffsets(positions);

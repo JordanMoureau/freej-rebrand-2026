@@ -1,0 +1,334 @@
+.page {
+  background: var(--white);
+  color: var(--foreground);
+}
+
+.navigation {
+  padding: 0.8rem;
+}
+
+.inner {
+  width: min(84%, 104rem);
+  margin-inline: auto;
+
+  @media (max-width: 760px) {
+    width: min(89%, 38rem);
+  }
+}
+
+/* Hero */
+
+.hero {
+  position: relative;
+  z-index: 2;
+  padding-block: clamp(2.75rem, 6vw, 6rem) 2rem;
+
+  .heroInner {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    @media (max-width: 760px) {
+      gap: 1rem;
+    }
+  }
+
+  .script {
+    margin: 0;
+    color: var(--red);
+    font: 400 clamp(1.8rem, 3.6vw, 3rem)/1.1 var(--organic-hand);
+  }
+
+  h1 {
+    max-width: 19ch;
+    margin: 0.7rem 0 0;
+    color: inherit;
+    font: 400 clamp(2.8rem, 6.2vw, 5.75rem)/1.02 var(--advercase);
+    text-wrap: balance;
+  }
+
+  .body {
+    max-width: 54ch;
+    margin-top: 1rem;
+    color: var(--new-black);
+    font-size: clamp(1.05rem, 1.4vw, 1.22rem);
+    line-height: 1.5;
+  }
+
+  .jump {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 100%;
+    margin-top: 1.25rem;
+    color: var(--red);
+    font: 400 clamp(1.7rem, 2.5vw, 2.3rem)/1.1 var(--organic-hand);
+    text-decoration: none;
+
+    svg {
+      display: block;
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+
+      path {
+        fill: currentColor;
+      }
+    }
+
+    &:hover {
+      color: var(--taupe);
+    }
+
+    &:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 4px;
+    }
+  }
+}
+
+.banner {
+  position: relative;
+  margin-top: -7rem;
+}
+
+/* Red feature section */
+
+.feature {
+  margin-top: -10rem;
+  padding-block: 15rem clamp(3rem, 6vw, 6rem);
+  background: var(--red);
+  color: var(--white);
+
+  h2 {
+    margin: 0;
+    color: inherit;
+    font: 400 clamp(2rem, 4vw, 5rem)/1.02 var(--organic-hand);
+    text-wrap: balance;
+  }
+
+  .caseStudyLink,
+  .ctaLink {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--organic-hand);
+    font-size: 2rem;
+
+    svg path {
+      fill: var(--white);
+    }
+
+    &:hover {
+      color: var(--dark-red);
+
+      svg path {
+        fill: currentColor;
+      }
+    }
+  }
+
+  .featureImage {
+    z-index: 0;
+
+    img {
+      margin-bottom: -10rem;
+      opacity: 0.7;
+      border-radius: 1.4rem;
+    }
+  }
+
+  /* Our Custom Sites Are Different */
+
+  > .inner {
+    display: flex;
+    max-width: 1100px;
+
+    .textBlock {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-right: 4rem;
+    }
+
+    .caseStudyLink svg {
+      width: 230px;
+    }
+
+    .featureImage {
+      position: relative;
+      width: 180%;
+    }
+  }
+
+  /* Tell Us What You Want to Sell */
+
+  .webfeature {
+    position: relative;
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    margin: 3rem auto;
+    text-align: center;
+    justify-content: center;
+
+    .featureImage {
+      min-width: 0;
+      margin-left: -19rem;
+      border-radius: 3rem;
+      object-fit: cover;
+      height: 1000px;
+
+      img {
+        z-index: 0;
+        display: block;
+        width: 500px;
+        height: auto;
+        opacity: 1;
+        transform: rotate(3deg);
+        opacity: 0.5;
+      }
+    }
+
+    .webbody {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      max-width: 800px;
+      z-index: 1;
+      margin-left: -3rem;
+
+      h2 {
+        font-size: clamp(4rem, 5vw, 6rem);
+        transform: rotate(-3deg);
+      }
+
+      p {
+        max-width: 700px;
+      }
+
+      .ctaLink {
+        width: fit-content;
+
+        svg {
+          width: 320px;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+.bannerTwo {
+  position: relative;
+  margin-top: -35rem;
+}
+
+/* Revenue and portfolio */
+
+.approach {
+  position: relative;
+  isolation: isolate;
+  z-index: 10;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  margin-top: -10rem;
+  padding: 6rem 2rem 9rem;
+  overflow: hidden;
+  border-radius: 3.5rem 3.5rem 0 0;
+  background-color: var(--warm-gray);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: url("/freejdesk.png") bottom left / cover no-repeat;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .storyInner {
+    width: min(100%, 1100px);
+    margin-inline: auto;
+  }
+
+  .storyHeading {
+    h2 {
+      max-width: 1000px;
+      color: var(--white);
+      font: 400 clamp(4rem, 9vw, 7rem)/0.9 var(--font-hello-organic);
+      text-align: right;
+      transform: rotate(3deg);
+    }
+
+    .storyLead {
+      max-width: 680px;
+      margin-top: 2rem;
+      color: var(--white);
+      font-family: var(--advercase);
+      font-size: clamp(1.6rem, 2.5vw, 2rem);
+      line-height: 1.1;
+    }
+  }
+
+  .storyCopy {
+    margin-top: 1rem;
+
+    p {
+      max-width: 700px;
+      color: var(--white);
+    }
+
+    .handwrittenLink {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      color: var(--white);
+      font-family: var(--font-hello-organic);
+      font-size: clamp(1.7rem, 2.5vw, 2.3rem);
+      line-height: 1.05;
+
+      svg {
+        width: 300px;
+        height: auto;
+      }
+
+      &:hover {
+        color: var(--red);
+
+        svg path {
+          fill: currentColor;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .feature .inner {
+    flex-direction: column;
+  }
+
+  .featureImage {
+    display: none;
+  }
+
+  .banner {
+    display: none;
+  }
+
+  .bannerTwo {
+    display: none;
+  }
+
+  .feature .webfeature .webbody {
+    margin-left: 0;
+  }
+}

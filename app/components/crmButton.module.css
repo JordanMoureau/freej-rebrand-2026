@@ -5,6 +5,9 @@
   margin-left: auto;
   align-self: flex-start;
   padding: 1.5rem;
+  a {
+    margin-left: 0;
+  }
 }
 
 .crmbutton {
@@ -30,4 +33,10 @@
   font-family: var(--font-advercase);
   color: #ef6343;
   font-size: 2rem;
+}
+
+@media (max-width: 900px) {
+  .stickyWrap {
+    display: none;
+  }
 }

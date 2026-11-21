@@ -46,7 +46,7 @@ export default function TrustBar() {
   }, [shouldReduceMotion]);
 
   return (
-    <div className={styles.bar}>
+    <a href="/about-freelance-jordan/testimonials" className={styles.bar}>
       <div className={styles.stars} aria-label="Five stars">
         {Array.from({ length: 5 }).map((_, index) => (
           <StarIcon key={index} />
@@ -91,6 +91,6 @@ export default function TrustBar() {
           </motion.span>
         </AnimatePresence>
       </div>
-    </div>
+    </a>
   );
 }

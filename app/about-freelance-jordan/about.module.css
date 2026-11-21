@@ -1,0 +1,618 @@
+.page {
+  width: 100%;
+  background: var(--white);
+}
+
+/* FULL-WIDTH VIDEO HERO */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  background: var(--new-black);
+}
+
+.backgroundVideo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgb(0 0 0 / 15%) 0%, rgb(0 0 0 / 3%) 100%);
+}
+.heroContent {
+  position: relative;
+
+  z-index: 2;
+
+  padding: 0.8rem;
+}
+
+.heroInner {
+  display: flex;
+
+  align-items: center;
+
+  width: min(100%, 1300px);
+
+  min-height: 85svh;
+
+  margin-inline: auto;
+
+  padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 4vw, 4rem);
+}
+
+.heroCopy {
+  width: 100%;
+
+  max-width: 850px;
+
+  min-width: 0;
+}
+
+.heroCopy h1 {
+  margin: 0;
+
+  color: var(--white);
+
+  font-family: var(--advercase);
+
+  font-size: clamp(3rem, 6.5vw, 6.5rem);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -0.035em;
+}
+
+.heroCopy h1 > span {
+  display: block;
+
+  margin-top: 8rem;
+
+  color: var(--red);
+
+  font-family: var(--font-hello-organic);
+
+  font-size: clamp(3.3rem, 6vw, 6rem);
+
+  line-height: 1.1;
+
+  letter-spacing: normal;
+}
+
+.heroDescription {
+  max-width: 570px;
+
+  margin: 2rem 0 0;
+
+  color: var(--white);
+
+  font-family: var(--baskerville);
+
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+
+  line-height: 1.8;
+}
+
+.heroLink {
+  display: flex;
+  flex-direction: column;
+
+  align-items: start;
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+
+  padding-block: 0.5rem;
+
+  color: var(--white);
+
+  font-family: var(--font-hello-organic);
+
+  font-size: 1.8rem;
+
+  line-height: 1.2;
+
+  text-decoration: none;
+  .swiggle {
+    width: 150px;
+  }
+}
+
+.heroLink:hover > .swiggle {
+  svg {
+    path {
+      fill: var(--dark-red);
+    }
+  }
+}
+
+.heroLink > span,
+.contactBar a > span {
+  font-family: Arial, sans-serif;
+
+  font-size: 1.2rem;
+}
+
+/* Match the homepage's cream introduction, compact copy and photo treatment. */
+.introduction {
+  position: relative;
+  z-index: 2;
+  padding: 5rem 3rem 4rem;
+  scroll-margin-top: 2rem;
+}
+
+.introInner {
+  width: min(100%, 1100px);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.8fr);
+  gap: 5rem;
+  align-items: center;
+  margin-bottom: -8rem;
+}
+
+.introCopy,
+.approachCopy,
+.storyCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.introCopy h2,
+.approachHeading h2 {
+  font-family: var(--font-hello-organic);
+  font-size: clamp(2.5rem, 3.6vw, 3.5rem);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.introCopy h2 {
+  color: var(--red);
+}
+
+.introCopy h3 {
+  font-family: var(--advercase);
+  color: var(--new-black);
+  font-size: clamp(1.5rem, 2.3vw, 2rem);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.introCopy p,
+.approachCopy p {
+  color: var(--new-black);
+  font-family: var(--baskerville);
+  font-size: 1.1rem;
+  line-height: 1.25;
+}
+
+.storyCopy p {
+  color: var(--white);
+}
+
+.portraitWrap {
+  margin: 0;
+  min-width: 0;
+}
+
+.portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 3rem;
+}
+
+/* Reuse the actual illustrated text strips from the homepage. */
+.banner {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  margin-top: -2rem;
+}
+
+.banner img,
+.bannerBottom img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.approach:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/clouddesk.jpg");
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.approach {
+  width: 100%;
+  background-color: var(--warm-gray);
+  position: relative;
+  isolation: isolate;
+  z-index: 10;
+  margin-top: -9rem;
+  border-top-left-radius: 3.5rem;
+  border-top-right-radius: 3.5rem;
+  padding: 6rem 2rem 25rem 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+}
+
+.personal {
+  position: relative;
+  z-index: 10;
+  margin-top: -12rem;
+}
+
+.storyInner {
+  width: min(100%, 1100px);
+  margin-inline: auto;
+}
+
+.handwrittenLink {
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: var(--white);
+  font-family: var(--font-hello-organic);
+  font-size: clamp(1.7rem, 2.5vw, 2.3rem);
+  line-height: 1.05;
+}
+
+.swiggle {
+  display: block;
+  width: min(100%, 240px);
+  margin-top: -0.5rem;
+  color: var(--white);
+}
+
+.swiggle svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.deskHeadline {
+  position: relative;
+  z-index: 1;
+  margin-top: -1.5rem;
+  padding-block: 1rem 2rem;
+  color: var(--white);
+  font-family: var(--font-hello-organic);
+  text-align: right;
+}
+
+.deskHeader {
+  font-size: clamp(2.8rem, 6vw, 6rem);
+  line-height: 0.85;
+  transform: rotate(-6deg);
+}
+
+.donuts {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-right: 1rem;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1;
+  transform: rotate(-4deg);
+}
+
+.stars {
+  display: block;
+  width: 100px;
+  flex-shrink: 0;
+}
+.stars svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.serviceLinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem 3rem;
+  margin-top: 2rem;
+}
+
+.serviceLinks a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--white);
+  font-family: var(--font-hello-organic);
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  line-height: 1.1;
+}
+
+/* Continue the coral field, following the homepage's large right-aligned headline. */
+.story {
+  background: var(--red);
+  padding: 2rem 3rem 3rem;
+}
+
+.storyHeading h2 {
+  max-width: 1000px;
+  color: var(--white);
+  font-family: var(--font-hello-organic);
+  font-size: clamp(4rem, 9vw, 7rem);
+  font-weight: 400;
+  line-height: 0.9;
+  text-align: right;
+  transform: rotate(3deg);
+}
+
+.storyHeading .storyLead {
+  max-width: 680px;
+  margin-top: 2rem;
+  color: var(--white);
+  font-family: var(--advercase);
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  line-height: 1.1;
+}
+
+.storyCopy {
+  margin-top: 1rem;
+}
+.storyCopy p {
+  max-width: 700px;
+}
+
+.handwrittenLink {
+  display: flex;
+  flex-direction: column;
+  svg {
+    width: 300px;
+    height: auto;
+  }
+}
+
+.handwrittenLink:hover {
+  color: var(--red);
+  svg {
+    path {
+      fill: var(--red);
+    }
+  }
+}
+
+/* Same centered project invitation and contact transition as the homepage. */
+.contactBar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: -3.5rem;
+  padding: 5rem 2rem;
+  border-radius: 3.5rem 3.5rem 0 0;
+  background: var(--white);
+  text-align: center;
+}
+
+.contactBar h2 {
+  color: var(--red);
+  font-family: var(--font-hello-organic);
+  font-size: clamp(2.3rem, 3.5vw, 3rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.contactBar .contactHeadline {
+  color: var(--red);
+  font-family: var(--advercase);
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  line-height: 1;
+}
+
+.contactBar a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+  color: var(--new-black);
+  font-family: var(--font-hello-organic);
+  font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.notConvincedBar {
+  padding: 0.7rem;
+  background: var(--red);
+  text-align: center;
+}
+
+.notConvincedBar p {
+  color: var(--white);
+  font-family: var(--advercase);
+  font-size: clamp(1.1rem, 2.5vw, 2rem);
+  line-height: 1.05;
+}
+
+.contactFormAbout {
+  padding: 8rem 3rem 5rem 8rem;
+  background-color: var(--dark-new-black);
+  background-image: url("/dark-chamomile.png");
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  scroll-margin-top: 1rem;
+}
+
+.heroLink:focus-visible,
+.handwrittenLink:focus-visible,
+.serviceLinks a:focus-visible,
+.contactBar a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 6px;
+}
+
+@media (hover: hover) {
+  .heroLink:hover {
+    color: var(--red);
+  }
+}
+
+@media (max-width: 1000px) {
+  .introInner,
+  .approachBody {
+    gap: 3rem;
+  }
+  .contactFormAbout {
+    padding: 5rem 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .heroInner {
+    min-height: 75svh;
+    padding: 4rem 1rem 5rem;
+  }
+  .heroCopy h1 {
+    font-size: clamp(2.8rem, 8.5vw, 4.8rem);
+  }
+  .heroCopy h1 > span {
+    font-size: clamp(3.4rem, 11vw, 6rem);
+  }
+  .hero::after {
+    background: rgb(0 0 0 / 60%);
+  }
+  .introduction {
+    padding: 3.5rem 1.5rem;
+  }
+  .introInner {
+    gap: 2rem;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr);
+  }
+  .portrait {
+    border-radius: 2rem;
+  }
+  .approach {
+    padding: 2rem 1.5rem;
+  }
+  .approachBody {
+    gap: 2rem;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.8fr);
+  }
+  .deskImage {
+    border-radius: 1.5rem;
+  }
+  .stars {
+    width: 65px;
+  }
+  .story {
+    padding: 2rem 1.5rem 3rem;
+  }
+  .serviceLinks {
+    gap: 1rem 1.5rem;
+  }
+  .contactBar {
+    margin-top: -1.5rem;
+    padding: 3rem 1.5rem;
+    border-radius: 2rem 2rem 0 0;
+  }
+  .contactFormAbout {
+    padding: 4rem 1.25rem 3rem;
+  }
+
+  .banner {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .portraitWrap {
+    display: none;
+  }
+
+  .approach {
+    margin-top: 8rem;
+  }
+
+  .personal {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .introInner,
+  .approachBody {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .portraitWrap {
+    width: min(75%, 300px);
+    margin: 0 0 1.5rem auto;
+  }
+  .deskVisual {
+    width: min(65%, 300px);
+    margin-left: auto;
+  }
+  .deskHeadline {
+    margin-top: -1rem;
+  }
+  .deskHeader {
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+  }
+  .donuts {
+    font-size: 1.4rem;
+    padding-right: 0;
+  }
+  .stars {
+    width: 55px;
+  }
+  .serviceLinks {
+    justify-content: flex-start;
+  }
+  .storyHeading h2 {
+    font-size: clamp(3rem, 12vw, 4.5rem);
+  }
+  .storyCopy .handwrittenLink {
+    align-self: flex-start;
+  }
+  .storyCopy .swiggle {
+    align-self: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backgroundVideo {
+    display: none;
+  }
+}
