@@ -16,24 +16,48 @@ export default function ContactForm() {
           your goals & how to get there.
         </p>
 
-        <form>
+        <form action="https://formspree.io/f/mjyweyqe" method="POST">
           <div className={styles.halfrow}>
-            <input placeholder="Your Name" />
-            <input placeholder="Your Phone Number" />
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              aria-label="Your name"
+              autoComplete="name"
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Your Phone Number"
+              aria-label="Your phone number"
+              autoComplete="tel"
+            />
           </div>
 
-          <input placeholder="An Email Address" />
+          <input
+            type="email"
+            name="email"
+            placeholder="An Email Address"
+            aria-label="Your email address"
+            autoComplete="email"
+            required
+          />
 
-          <textarea placeholder="What's this about?" />
+          <textarea
+            name="message"
+            placeholder="What's this about?"
+            aria-label="What's this about?"
+            required
+          />
 
-          <button>
-            {" "}
-            <div className={styles.marquee}>
+          <button type="submit" aria-label="Send your inquiry">
+            <span className={styles.marquee} aria-hidden="true">
               <span>
                 SEND · SEND · SEND · SEND · SEND · SEND · SEND · SEND · SEND ·
                 SEND · SEND · SEND · SEND · SEND · SEND ·
               </span>
-            </div>
+            </span>
           </button>
         </form>
       </div>
